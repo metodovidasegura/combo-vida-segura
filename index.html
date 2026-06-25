@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combo Vida Segura — Proteja Sua Família Agora</title>
+    <meta name="description" content="4 manuais práticos de segurança pessoal para proteger sua família no dia a dia. Método Vida Segura.">
+
+    <style>
+        :root {
+            --azul:    #1f3a5f;
+            --dourado: #C5A020;
+            --laranja: #E8A020;
+            --verde:   #28A745;
+            --fundo:   #F4F6F9;
+            --texto:   #1a1a2e;
+            --branco:  #ffffff;
+            --cinza:   #64748b;
+            --borda:   #e2e8f0;
+        }
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            color: var(--texto);
+            background: var(--branco);
+            line-height: 1.65;
+            font-size: 1rem;
+        }
+
+        /* LOGO */
+        .logo-topo {
+            height: 48px;
+            width: auto;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+
+        .logo-hero {
+            width: 110px;
+            height: 110px;
+            object-fit: contain;
+            display: block;
+            margin: 0 auto 20px;
+            filter: drop-shadow(0 4px 16px rgba(0,0,0,.4));
+        }
+
+        /* BARRA TOPO */
+        .topo {
+            background: var(--azul);
+            color: var(--dourado);
+            text-align: center;
+            padding: 10px 20px;
+            font-size: .85rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        /* STICKY CTA MOBILE */
+        .sticky-cta {
+            display: none;
+            position: fixed;
+            bottom: 0; left: 0; right: 0;
+            z-index: 999;
+            background: var(--verde);
+            color: var(--branco);
+            text-align: center;
+            padding: 16px 20px;
+            font-size: 1rem;
+            font-weight: 700;
+            text-decoration: none;
+            border-top: 3px solid #1e7e34;
+            box-shadow: 0 -4px 20px rgba(0,0,0,.2);
+        }
+        @media (max-width: 768px) { .sticky-cta { display: block; } }
+
+        /* HERO */
+        .hero {
+            background: linear-gradient(150deg, #0d2240 0%, #1f3a5f 60%, #2a4d7a 100%);
+            color: var(--branco);
+            padding: 60px 20px 50px;
+            text-align: center;
+        }
+
+        .hero-eyebrow {
+            display: inline-block;
+            background: var(--dourado);
+            color: var(--azul);
+            font-size: .78rem;
+            font-weight: 800;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            padding: 6px 18px;
+            border-radius: 2px;
+            margin-bottom: 22px;
+        }
+
+        .hero h1 {
+            font-size: clamp(1.6rem, 4vw, 2.6rem);
+            font-weight: 800;
+            max-width: 780px;
+            margin: 0 auto 14px;
+            line-height: 1.2;
+        }
+
+        .hero h1 span { color: var(--dourado); }
+
+        .hero-sub {
+            font-size: 1.15rem;
+            color: rgba(255,255,255,.82);
+            max-width: 600px;
+            margin: 0 auto 36px;
+        }
+
+        .capa-wrap {
+            max-width: 360px;
+            margin: 0 auto 36px;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 2px solid var(--dourado);
+            box-shadow: 0 20px 50px rgba(0,0,0,.45);
+            background: linear-gradient(135deg, #0d2240 0%, #2a4d7a 100%);
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .capa-wrap img { width: 100%; display: block; }
+
+        .capa-placeholder {
+            color: var(--dourado);
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-align: center;
+            padding: 40px 20px;
+            letter-spacing: 1px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 20px 42px;
+            border-radius: 50px;
+            font-size: 1.15rem;
+            font-weight: 800;
+            text-decoration: none;
+            transition: transform .15s, box-shadow .15s;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-verde {
+            background: var(--verde);
+            color: var(--branco);
+            border-bottom: 4px solid #1e7e34;
+            box-shadow: 0 6px 20px rgba(40,167,69,.35);
+        }
+
+        .btn-dourado {
+            background: var(--dourado);
+            color: var(--azul);
+            border-bottom: 4px solid #a3831a;
+            box-shadow: 0 6px 20px rgba(197,160,32,.35);
+        }
+
+        .btn:hover { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(0,0,0,.2); }
+
+        .hero-micro {
+            margin-top: 14px;
+            font-size: .85rem;
+            color: rgba(255,255,255,.6);
+        }
+
+        /* SEÇÃO DOR */
+        .secao-dor {
+            background: var(--fundo);
+            padding: 60px 20px;
+        }
+
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+        }
+
+        .secao-dor h2 {
+            font-size: 1.6rem;
+            color: var(--azul);
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+
+        .secao-dor p {
+            color: #374151;
+            font-size: 1.05rem;
+            margin-bottom: 16px;
+        }
+
+        .lista-dor {
+            list-style: none;
+            margin: 24px 0;
+        }
+
+        .lista-dor li {
+            padding: 10px 0 10px 32px;
+            position: relative;
+            color: #374151;
+            font-size: 1rem;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .lista-dor li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--laranja);
+            font-weight: 700;
+        }
+
+        /* SEÇÃO PRODUTOS */
+        .secao-produtos {
+            padding: 70px 20px;
+            text-align: center;
+        }
+
+        .secao-produtos h2 {
+            font-size: 1.7rem;
+            color: var(--azul);
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+
+        .secao-produtos .sub {
+            color: var(--cinza);
+            margin-bottom: 48px;
+            font-size: 1.05rem;
+        }
+
+        .grid-produtos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 24px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: var(--branco);
+            border: 1px solid var(--borda);
+            border-radius: 14px;
+            padding: 28px 22px;
+            text-align: left;
+            box-shadow: 0 2px 12px rgba(0,0,0,.06);
+            transition: box-shadow .2s, transform .2s;
+        }
+
+        .card:hover { box-shadow: 0 8px 30px rgba(31,58,95,.15); transform: translateY(-3px); }
+
+        .card-nivel {
+            display: inline-block;
+            background: var(--azul);
+            color: var(--dourado);
+            font-size: .7rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+            padding: 4px 12px;
+            border-radius: 20px;
+            margin-bottom: 14px;
+        }
+
+        .card-nivel.bonus { background: #dc3545; color: var(--branco); }
+
+        .card h3 {
+            font-size: 1.1rem;
+            font-weight: 800;
+            color: var(--azul);
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            font-size: .92rem;
+            color: #4b5563;
+            line-height: 1.55;
+        }
+
+        .card-icone {
+            font-size: 2rem;
+            margin-bottom: 12px;
+            display: block;
+        }
+
+        /* PROVA SOCIAL */
+        .secao-prova {
+            background: var(--azul);
+            color: var(--branco);
+            padding: 70px 20px;
+            text-align: center;
+        }
+
+        .secao-prova h2 {
+            font-size: 1.6rem;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+
+        .secao-prova .sub {
+            color: rgba(255,255,255,.7);
+            margin-bottom: 44px;
+        }
+
+        .grid-depo {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .depo {
+            background: rgba(255,255,255,.07);
+            border: 1px solid rgba(255,255,255,.12);
+            border-radius: 12px;
+            padding: 24px;
+            text-align: left;
+        }
+
+        .depo-estrelas { color: var(--dourado); font-size: 1.1rem; margin-bottom: 12px; }
+
+        .depo p {
+            font-size: .95rem;
+            color: rgba(255,255,255,.88);
+            line-height: 1.6;
+            margin-bottom: 16px;
+            font-style: italic;
+        }
+
+        .depo-autor {
+            font-size: .82rem;
+            font-weight: 700;
+            color: var(--dourado);
+            letter-spacing: .5px;
+        }
+
+        /* AUTORIDADE */
+        .secao-autoridade {
+            padding: 60px 20px;
+            background: var(--fundo);
+        }
+
+        .autoridade-inner {
+            max-width: 680px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .autoridade-inner h2 {
+            font-size: 1.5rem;
+            color: var(--azul);
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+
+        .autoridade-inner p {
+            font-size: 1.02rem;
+            color: #374151;
+            margin-bottom: 14px;
+        }
+
+        .credencial-lista {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 28px;
+        }
+
+        .credencial {
+            background: var(--azul);
+            color: var(--dourado);
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-size: .82rem;
+            font-weight: 700;
+            letter-spacing: .5px;
+        }
+
+        /* OFERTA */
+        .secao-oferta {
+            background: linear-gradient(150deg, #0d2240 0%, #1f3a5f 100%);
+            color: var(--branco);
+            padding: 70px 20px;
+            text-align: center;
+            border-top: 4px solid var(--dourado);
+        }
+
+        /* COMBO tag maior */
+        .tag-combo {
+            display: inline-block;
+            background: var(--dourado);
+            color: var(--azul);
+            font-weight: 800;
+            padding: 12px 34px;
+            border-radius: 4px;
+            font-size: 1.25rem;
+            letter-spacing: 4px;
+            margin-bottom: 24px;
+            transform: rotate(-1.5deg);
+        }
+
+        .oferta-incluso {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            max-width: 600px;
+            margin: 0 auto 32px;
+        }
+
+        .oferta-item {
+            background: rgba(255,255,255,.08);
+            border: 1px solid rgba(255,255,255,.15);
+            padding: 8px 18px;
+            border-radius: 30px;
+            font-size: .9rem;
+            color: rgba(255,255,255,.9);
+        }
+
+        .preco-antigo {
+            text-decoration: line-through;
+            color: rgba(255,255,255,.45);
+            font-size: 1.3rem;
+        }
+
+        .preco-novo {
+            font-size: clamp(3rem, 8vw, 4.5rem);
+            font-weight: 900;
+            color: var(--dourado);
+            line-height: 1;
+            margin: 8px 0 6px;
+        }
+
+        .preco-detalhe {
+            font-size: .9rem;
+            color: rgba(255,255,255,.6);
+            margin-bottom: 10px;
+        }
+
+        .preco-comparacao {
+            font-size: .88rem;
+            color: rgba(255,255,255,.45);
+            margin-bottom: 28px;
+            font-style: italic;
+        }
+
+        /* GARANTIA */
+        .secao-garantia {
+            padding: 60px 20px;
+        }
+
+        .garantia-inner {
+            max-width: 680px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            background: #fefcf3;
+            border: 2px solid var(--dourado);
+            border-radius: 16px;
+            padding: 36px 32px;
+        }
+
+        /* SELO 7 DIAS maior */
+        .selo {
+            flex-shrink: 0;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 4px solid var(--dourado);
+            background: var(--branco);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            color: var(--azul);
+            font-size: 1.6rem;
+            line-height: 1.1;
+        }
+
+        .selo-sub {
+            font-size: .65rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: var(--cinza);
+            text-transform: uppercase;
+            margin-top: 2px;
+        }
+
+        .garantia-inner h3 {
+            font-size: 1.25rem;
+            color: var(--azul);
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        .garantia-inner p {
+            color: #374151;
+            font-size: .97rem;
+        }
+
+        /* FAQ */
+        .secao-faq {
+            background: var(--fundo);
+            padding: 70px 20px;
+        }
+
+        .secao-faq h2 {
+            text-align: center;
+            font-size: 1.6rem;
+            color: var(--azul);
+            font-weight: 800;
+            margin-bottom: 40px;
+        }
+
+        .faq-lista {
+            max-width: 680px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--branco);
+            border: 1px solid var(--borda);
+            border-radius: 10px;
+            padding: 20px 24px;
+            margin-bottom: 12px;
+        }
+
+        .faq-item strong {
+            display: block;
+            color: var(--azul);
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .faq-item p {
+            color: #4b5563;
+            font-size: .95rem;
+        }
+
+        /* CTA FINAL */
+        .secao-cta-final {
+            padding: 70px 20px;
+            text-align: center;
+            background: var(--branco);
+        }
+
+        .secao-cta-final h2 {
+            font-size: 1.7rem;
+            color: var(--azul);
+            font-weight: 800;
+            max-width: 600px;
+            margin: 0 auto 10px;
+        }
+
+        .secao-cta-final p {
+            color: var(--cinza);
+            margin-bottom: 32px;
+        }
+
+        /* RODAPÉ */
+        .rodape {
+            background: var(--azul);
+            color: rgba(255,255,255,.5);
+            text-align: center;
+            padding: 24px 20px;
+            font-size: .8rem;
+        }
+
+        .rodape span { color: var(--dourado); }
+
+        /* RESPONSIVO */
+        @media (max-width: 600px) {
+            .garantia-inner { flex-direction: column; text-align: center; padding: 28px 20px; }
+            .grid-produtos { grid-template-columns: 1fr; }
+            body { padding-bottom: 70px; }
+        }
+
+        /* DIVISOR */
+        .divisor {
+            height: 4px;
+            background: linear-gradient(90deg, var(--azul), var(--dourado), var(--azul));
+            opacity: .25;
+        }
+    </style>
+</head>
+<body>
+
+<a href="https://chk.eduzz.com/8WPNX67P0P" class="sticky-cta">📦 QUERO O COMBO, R$ 49,90</a>
+
+<div class="topo">
+    <img src="logo-vida-segura.png" alt="Método Vida Segura" class="logo-topo"
+         onerror="this.style.display='none'">
+    MÉTODO VIDA SEGURA
+</div>
+
+<!-- HERO -->
+<section class="hero">
+    <img src="logo-vida-segura.png" alt="Método Vida Segura" class="logo-hero"
+         onerror="this.style.display='none'">
+    <span class="hero-eyebrow">Biblioteca de Proteção Familiar</span>
+
+    <h1>Você cuida de tudo.<br><span>Quem cuida da sua segurança?</span></h1>
+
+    <p class="hero-sub">
+        4 manuais práticos que ensinam como proteger seu lar, seu celular,
+        seus filhos e sua família, sem depender da sorte.
+    </p>
+
+    <div class="capa-wrap">
+        <img src="logo-vida-segura.png" alt="Método Vida Segura"
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+        <div class="capa-placeholder" style="display:none">
+            📦 COMBO VIDA SEGURA<br><br>4 Manuais de Proteção Familiar
+        </div>
+    </div>
+
+    <a href="#oferta" class="btn btn-verde">QUERO PROTEGER MINHA FAMÍLIA AGORA →</a>
+    <p class="hero-micro">✓ Acesso imediato após o pagamento &nbsp;|&nbsp; ✓ Garantia de 7 dias</p>
+</section>
+
+<!-- DOR -->
+<section class="secao-dor">
+    <div class="container">
+        <h2>Parece que segurança é para quem pode pagar caro. Não é.</h2>
+
+        <p>Câmeras caras, cercas elétricas, alarmes sofisticados, esses equipamentos registram
+        o ocorrido depois que ele já aconteceu. O que realmente protege sua família é diferente:
+        são hábitos simples, aplicados na hora certa.</p>
+
+        <p>Se você já se pegou pensando em alguma dessas situações, este combo é para você:</p>
+
+        <ul class="lista-dor">
+            <li>Medo de que algo aconteça com os seus filhos no caminho da escola</li>
+            <li>Insegurança ao chegar em casa tarde e abrir o portão</li>
+            <li>Pavor de que seu celular seja roubado com acesso ao banco desbloqueado</li>
+            <li>Não saber como agir se entrar num Uber e sentir que algo está errado</li>
+            <li>Sensação de que qualquer orientação de segurança exige treinamento especial</li>
+        </ul>
+
+        <p>O Método Vida Segura foi construído para quem não tem formação em segurança,
+        mas precisa agir com inteligência no mundo real.</p>
+    </div>
+</section>
+
+<div class="divisor"></div>
+
+<!-- PRODUTOS -->
+<section class="secao-produtos">
+    <h2>O que está na sua biblioteca de proteção</h2>
+    <p class="sub">4 manuais independentes, aplicáveis hoje mesmo</p>
+
+    <div class="grid-produtos">
+
+        <div class="card">
+            <span class="card-icone">🏠</span>
+            <span class="card-nivel">NÍVEL 3, COMPLETO</span>
+            <h3>Seu Lar Seguro</h3>
+            <p>O método dos Círculos de Defesa: como avaliar os pontos vulneráveis
+            da sua residência e criar rotinas familiares que funcionam no mundo real,
+            sem grandes obras e sem alto custo.</p>
+        </div>
+
+        <div class="card">
+            <span class="card-icone">📱</span>
+            <span class="card-nivel">NÍVEL 2, INTERMEDIÁRIO</span>
+            <h3>Celular Seguro</h3>
+            <p>Como proteger seu aparelho e o que fazer para minimizar os danos se
+            uma ocorrência acontecer. Configurações que a maioria desconhece e que
+            impedem o acesso aos seus aplicativos bancários mesmo com o aparelho levado.</p>
+        </div>
+
+        <div class="card">
+            <span class="card-icone">🎒</span>
+            <span class="card-nivel">NÍVEL 2, INTERMEDIÁRIO</span>
+            <h3>Mochila Segura</h3>
+            <p>7 passos para proteger seus filhos no caminho de casa até a escola e
+            de volta. Um protocolo simples que qualquer criança consegue aprender,
+            e que qualquer mãe vai querer ensinar.</p>
+        </div>
+
+        <div class="card">
+            <span class="card-icone">🚗</span>
+            <span class="card-nivel bonus">BÔNUS, NÍVEL 1</span>
+            <h3>Uber Seguro</h3>
+            <p>Como verificar um carro, o que observar antes de entrar, o que fazer
+            se algo parecer errado. Um guia rápido de 5 minutos que você vai usar
+            toda vez que pedir um aplicativo.</p>
+        </div>
+
+    </div>
+</section>
+
+<div class="divisor"></div>
+
+<!-- PROVA SOCIAL -->
+<section class="secao-prova">
+    <h2>O que quem já leu está falando</h2>
+    <p class="sub">Experiências reais de quem aplicou o método</p>
+
+    <div class="grid-depo">
+
+        <div class="depo">
+            <div class="depo-estrelas">★★★★★</div>
+            <p>"Li o Seu Lar Seguro em uma tarde e já na mesma noite ajustei três
+            coisas na entrada da casa. Parece simples, mas nunca tinha pensado nisso.
+            Valeu cada centavo."</p>
+            <span class="depo-autor">Renata M., Recife/PE</span>
+        </div>
+
+        <div class="depo">
+            <div class="depo-estrelas">★★★★★</div>
+            <p>"O capítulo do Celular Seguro me abriu os olhos. Fiz as configurações
+            em menos de 20 minutos e agora durmo mais tranquila sabendo que meu banco
+            está protegido mesmo se o aparelho for levado."</p>
+            <span class="depo-autor">Cláudia F., Fortaleza/CE</span>
+        </div>
+
+        <div class="depo">
+            <div class="depo-estrelas">★★★★★</div>
+            <p>"Mandei o Mochila Segura para o grupo de mães da escola. Em dois dias,
+            mais de 10 mães me perguntaram onde comprar o combo completo. O conteúdo
+            é sério e fácil de entender ao mesmo tempo."</p>
+            <span class="depo-autor">Patrícia A., Natal/RN</span>
+        </div>
+
+    </div>
+</section>
+
+<!-- AUTORIDADE -->
+<section class="secao-autoridade">
+    <div class="autoridade-inner">
+        <h2>Por que este método funciona</h2>
+
+        <p>O Método Vida Segura foi construído a partir de uma premissa simples:
+        orientação de segurança que exige treinamento especializado não serve para
+        a maioria das pessoas. Ela precisa ser útil para quem nunca teve aula sobre
+        o assunto e precisa agir agora.</p>
+
+        <p>Cada orientação passou pelo filtro de uma pergunta direta: isso funciona
+        na vida real de quem não tem nenhum preparo formal? Se a resposta fosse não,
+        a orientação era descartada ou reescrita até funcionar.</p>
+
+        <p>O resultado são manuais que qualquer pessoa aplica hoje, sem equipamento,
+        sem formação específica e sem gastar com soluções que só fingem proteger.</p>
+
+        <div class="credencial-lista">
+            <span class="credencial">Testado na prática</span>
+            <span class="credencial">Válido em qualquer cidade</span>
+            <span class="credencial">Conteúdo que empodera</span>
+            <span class="credencial">Para qualquer pessoa</span>
+        </div>
+    </div>
+</section>
+
+<div class="divisor"></div>
+
+<!-- OFERTA -->
+<section class="secao-oferta" id="oferta">
+    <span class="tag-combo">COMBO</span>
+
+    <h2 style="font-size: 1.7rem; margin-bottom: 20px;">
+        Tudo que sua família precisa,<br>em um só lugar.
+    </h2>
+
+    <div class="oferta-incluso">
+        <span class="oferta-item">✓ Seu Lar Seguro</span>
+        <span class="oferta-item">✓ Celular Seguro</span>
+        <span class="oferta-item">✓ Mochila Segura</span>
+        <span class="oferta-item">✓ Uber Seguro (bônus)</span>
+    </div>
+
+    <div class="preco-antigo">De R$ 72,80</div>
+    <div class="preco-novo">R$ 49,90</div>
+    <p class="preco-detalhe">Acesso imediato. Você escolhe onde e quando ler.</p>
+    <p class="preco-comparacao">Menos do que você gasta num fim de semana, com validade para a vida inteira.</p>
+
+    <a href="https://chk.eduzz.com/8WPNX67P0P" class="btn btn-dourado" style="font-size: 1.2rem; padding: 22px 50px;">
+        QUERO A BIBLIOTECA COMPLETA POR R$ 49,90 →
+    </a>
+
+    <p style="margin-top: 16px; font-size: .85rem; color: rgba(255,255,255,.5);">
+        Pagamento seguro via Eduzz &nbsp;|&nbsp; Pix, cartão e boleto &nbsp;|&nbsp; Garantia de 7 dias
+    </p>
+</section>
+
+<!-- GARANTIA -->
+<section class="secao-garantia">
+    <div class="garantia-inner">
+        <div class="selo">
+            7<br>DIAS
+        </div>
+        <div>
+            <h3>Garantia de Satisfação Total</h3>
+            <p>Eu assumo todo o risco por você. Se em até 7 dias você ler os manuais e
+            achar que as orientações não trazem mais tranquilidade para a rotina da sua
+            casa, solicite o reembolso na plataforma Eduzz. Devolvemos 100% do seu dinheiro,
+            sem burocracia e sem perguntas.</p>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ -->
+<section class="secao-faq">
+    <h2>Perguntas frequentes</h2>
+    <div class="faq-lista">
+
+        <div class="faq-item">
+            <strong>Como vou receber os manuais?</strong>
+            <p>Imediatamente após a confirmação do pagamento, você receberá um e-mail
+            com o link para download. Os arquivos são em PDF e funcionam em qualquer
+            celular, tablet ou computador.</p>
+        </div>
+
+        <div class="faq-item">
+            <strong>Preciso ter conhecimento em segurança para entender o conteúdo?</strong>
+            <p>Não. Os manuais foram escritos para quem não tem nenhuma formação na área.
+            Linguagem simples, orientações diretas e aplicáveis no mesmo dia em que você lê.</p>
+        </div>
+
+        <div class="faq-item">
+            <strong>Preciso comprar equipamentos ou contratar serviços?</strong>
+            <p>Não. O método é baseado em comportamento e hábito, não em produto.
+            A maioria das orientações não custa nada, apenas atenção aplicada
+            nos momentos certos.</p>
+        </div>
+
+        <div class="faq-item">
+            <strong>Como funciona a garantia de 7 dias?</strong>
+            <p>Se por qualquer motivo você não ficar satisfeito, basta solicitar o
+            reembolso diretamente na plataforma Eduzz dentro de 7 dias após a compra.
+            Você recebe 100% do valor de volta, sem precisar dar explicação.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="secao-cta-final">
+    <h2>Segurança não é sorte. É atenção aplicada no momento certo.</h2>
+    <p>Comece hoje. Acesso imediato após o pagamento.</p>
+    <a href="https://chk.eduzz.com/8WPNX67P0P" class="btn btn-verde" style="font-size: 1.1rem;">
+        QUERO PROTEGER MINHA FAMÍLIA AGORA →
+    </a>
+</section>
+
+<!-- RODAPÉ -->
+<footer class="rodape">
+    <img src="logo-vida-segura.png" alt="Método Vida Segura"
+         style="height:36px;width:auto;opacity:.6;display:block;margin:0 auto 10px;"
+         onerror="this.style.display='none'">
+    <p>
+        <span>MÉTODO VIDA SEGURA</span> &nbsp;|&nbsp;
+        Projeto Todo Mundo Seguro &nbsp;|&nbsp;
+        Conteúdo para fins educativos e preventivos
+    </p>
+    <p style="margin-top: 8px;">Dúvidas? Fale com a gente pelo e-mail de suporte disponível na plataforma Eduzz.</p>
+</footer>
+
+</body>
+</html>
